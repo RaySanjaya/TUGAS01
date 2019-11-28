@@ -11,7 +11,7 @@
         android:paddingBottom="2dip"
         android:paddingTop="6dip"
         android:textSize="16sp"
-        android:textColor="#00ccff"
+        android:textColor="#ff003366"
         android:textStyle="bold" />
  
     <TextView
