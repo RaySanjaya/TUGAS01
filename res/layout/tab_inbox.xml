@@ -3,20 +3,32 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent" >
     
+    <Button 
+        android:id="@+id/btsend"
+        android:text="Kirim Pesan Baru"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        />
+    
     <TextView 
         android:id="@+id/Jumlahinbox"
         android:text="Total inbox : "
+        android:textStyle="bold"
+        android:textColor="#ff800000"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/btsend"
         />
     
     <TextView 
         android:id="@+id/Totalinbox"
         android:text="0"
+        android:textStyle="bold"
         android:layout_marginStart="8dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_toEndOf="@+id/Jumlahinbox"
+        android:layout_below="@+id/btsend"
         />
     
     <ListView

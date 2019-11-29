@@ -58,12 +58,12 @@ public class MainActivity extends Activity {
 				
 				intent.putExtra("id", hm.get("id"));
 				intent.putExtra("name", hm.get("name"));
-				//intent.putExtra("address", hm.get("address"));
-				//intent.putExtra("email", hm.get("email"));
-				//intent.putExtra("phone", hm.get("phone"));
-				//intent.putExtra("dob", hm.get("dob"));
-				//intent.putExtra("created_at", hm.get("created_at"));
-				//intent.putExtra("updated_at", hm.get("updated_at"));
+				intent.putExtra("address", hm.get("address"));
+				intent.putExtra("email", hm.get("email"));
+				intent.putExtra("phone", hm.get("phone"));
+				intent.putExtra("dob", hm.get("dob"));
+				intent.putExtra("created_at", hm.get("created_at"));
+				intent.putExtra("updated_at", hm.get("updated_at"));
 				
 				startActivity(intent);
 				

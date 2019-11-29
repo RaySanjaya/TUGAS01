@@ -1,12 +1,12 @@
 package com.example.raysanjayagulo_163303030422_tugas1_7tipagib;
 
 import java.util.ArrayList;
+
 import java.util.HashMap;
 
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-
 import android.app.Fragment;
 import android.app.ProgressDialog;
 import android.os.AsyncTask;
@@ -47,7 +47,7 @@ public class FragmentOutbox extends Fragment {
         lv = (ListView) rootView.findViewById(R.id.messagelist);
         Totaloutbox = (TextView) rootView.findViewById(R.id.Totaloutbox);
         
-        new GetMessages().execute();        
+        //new GetMessages().execute();        
 
         return rootView;
     }
@@ -66,11 +66,12 @@ public class FragmentOutbox extends Fragment {
  
         @Override
         protected Void doInBackground(Void... arg0) {
-    		String Id = getArguments().getString("id");
+        	messagelist.clear();
+        	String IdContacts = getArguments().getString("id");
         	
             HttpHandler sh = new HttpHandler();
  
-            String jsonStr = sh.makeServiceCall(url + Id);
+            String jsonStr = sh.makeServiceCall(url + IdContacts);
  
             Log.e(TAG, "Response from url: " + jsonStr);
  
@@ -143,5 +144,10 @@ public class FragmentOutbox extends Fragment {
             lv.setAdapter(adapter);
         }
  
+    }
+	
+	public void onResume() {
+    	super.onResume();
+    	new GetMessages().execute();
     }
 }
